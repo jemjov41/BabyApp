@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/navigation_panduan"
+        android:icon="@drawable/ic_panduan"
+        android:title="Panduan"/>
+
+    <item
+    android:id="@+id/navigation_tools"
+    android:icon="@drawable/ic_tools"
+    android:title="Tools"/>
+
+    <item
+        android:id="@+id/navigation_forum"
+        android:icon="@drawable/ic_forum"
+        android:title="Forum"/>
+
+</menu>
