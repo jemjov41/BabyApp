@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">BabyApp</string>
+
+    //home page
+    <string name="detail_perkembangan_bayi">Detail Perkembangan Bayi Pada Minggu      </string>
+    <string name="detail_checklist">List yang Perlu di Kerjakan Pada Minggu </string>
+    <string name="detail_Activities">Detail Perkembangan Bayi Pada Minggu </string>
+    <string name="detail_perlengkapan_dan_mainan">Perlengkapan dan Mainan untuk Bayi Pada Minggu</string>
+    <string name="detail_resep_mpasi">Resep Pendamping ASI Sehat dan Antialergi</string>
+    <string name="resep_mpasi">Resep MPASI</string>
+    <string name="foto_bayi_hari_ini">Foto Bayi Anda Hari ini</string>
+
+    //panduan page
+    <string name="perkembangan_bayi">Perkembangan Bayi</string>
+    <string name="checklist">Checklist</string>
+    <string name="Activities">Activities</string>
+    <string name="perlengkapan_dan_mainan">Perlengkapan dan Mainan</string>
+    <string name="resep_makanan">Resep Makanan</string>
+    <string name="tips_perkembangan">Tips</string>
+
+    //tools page
+    <string name="foto_bayi_setiap_hari">Foto Bayi Setiap Hari</string>
+    <string name="memories">Memories</string>
+    <string name="e_cards">E-Cards</string>
+    <string name="lullabies">Lullabies</string>
+    <string name="white_noise">White Noise</string>
 </resources>

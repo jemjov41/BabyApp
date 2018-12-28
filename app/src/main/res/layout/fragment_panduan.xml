@@ -1,29 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textPanduan"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="Panduan Here" />-->
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/panduanCheck"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_alignEnd="@+id/textPanduan" />-->
+
+    <!--</LinearLayout>-->
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginTop"
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/textPanduan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Panduan Here" />
+        <LinearLayout
+            android:id="@+id/layoutPerkembangan"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:layout_marginEnd="@dimen/itemLeftMarginRight"
+            android:layout_marginStart="@dimen/itemleftMarginLeft"
+            android:background="@drawable/background_rectangle_riple"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
 
-        <CheckBox
-            android:id="@+id/panduanCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_alignEnd="@+id/textPanduan" />
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:gravity="center"
+                android:text="@string/perkembangan_bayi" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutChecklist"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:background="@drawable/background_rectangle_riple"
+            android:layout_marginEnd="@dimen/itemRightMarginRight"
+            android:layout_marginStart="@dimen/itemRightMarginLeft"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:gravity="center"
+                android:text="@string/checklist" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginTop"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/layoutActivities"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:layout_marginEnd="@dimen/itemLeftMarginRight"
+            android:layout_marginStart="@dimen/itemleftMarginLeft"
+            android:background="@drawable/background_rectangle_riple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:gravity="center"
+                android:text="@string/Activities" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPerlengkapan"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:background="@drawable/background_rectangle_riple"
+            android:layout_marginEnd="@dimen/itemRightMarginRight"
+            android:layout_marginStart="@dimen/itemRightMarginLeft"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:gravity="center"
+                android:text="@string/perlengkapan_dan_mainan" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginTop"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/layoutResep"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:layout_marginEnd="@dimen/itemLeftMarginRight"
+            android:layout_marginStart="@dimen/itemleftMarginLeft"
+            android:background="@drawable/background_rectangle_riple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:gravity="center"
+                android:text="@string/resep_makanan" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTips"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:background="@drawable/background_rectangle_riple"
+            android:layout_marginEnd="@dimen/itemRightMarginRight"
+            android:layout_marginStart="@dimen/itemRightMarginLeft"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:gravity="center"
+                android:text="@string/tips_perkembangan" />
+        </LinearLayout>
 
     </LinearLayout>
 
 
-</RelativeLayout>
+
+
+</LinearLayout>

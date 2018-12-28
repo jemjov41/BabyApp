@@ -1,17 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Tools Here"-->
+    <!--android:textSize="48dp"-->
+    <!--android:layout_centerInParent="true"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tools Here"
-        android:textSize="48dp"
-        android:layout_centerInParent="true"/>
+        android:layout_marginTop="@dimen/marginTop"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/layoutPerkembangan"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:layout_marginStart="@dimen/itemleftMarginLeft"
+            android:layout_marginEnd="@dimen/itemLeftMarginRight"
+            android:background="@drawable/background_rectangle_riple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/foto_bayi_setiap_hari" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutChecklist"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:layout_marginStart="@dimen/itemRightMarginLeft"
+            android:layout_marginEnd="@dimen/itemRightMarginRight"
+            android:background="@drawable/background_rectangle_riple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/memories" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layoutActivities"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:layout_marginStart="@dimen/itemleftMarginLeft"
+            android:layout_marginEnd="@dimen/itemLeftMarginRight"
+            android:background="@drawable/background_rectangle_riple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/e_cards" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPerlengkapan"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:layout_marginStart="@dimen/itemRightMarginLeft"
+            android:layout_marginEnd="@dimen/itemRightMarginRight"
+            android:background="@drawable/background_rectangle_riple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/lullabies" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layoutResep"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:layout_marginStart="@dimen/itemleftMarginLeft"
+            android:layout_marginEnd="@dimen/itemLeftMarginRight"
+            android:background="@drawable/background_rectangle_riple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/white_noise" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTips"
+            android:layout_width="@dimen/backGroundSize"
+            android:layout_height="@dimen/backGroundSize"
+            android:layout_marginStart="@dimen/itemRightMarginLeft"
+            android:layout_marginEnd="@dimen/itemRightMarginRight"
+            android:background="@drawable/background_rectangle_riple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:clickable="false">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                app:srcCompat="@drawable/ic_growth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/tips_perkembangan" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

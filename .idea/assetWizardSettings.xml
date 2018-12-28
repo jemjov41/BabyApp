@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -14,11 +19,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="height" value="960" />
-                            <entry key="outputName" value="ic_tools" />
+                            <entry key="height" value="364" />
+                            <entry key="outputName" value="ic_growth" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\Jemmy\Downloads\work-tools-cross.svg" />
-                            <entry key="width" value="960" />
+                            <entry key="sourceFile" value="C:\Users\Jemmy\Downloads\progress-report.svg" />
+                            <entry key="width" value="364" />
                           </map>
                         </option>
                       </PersistentState>

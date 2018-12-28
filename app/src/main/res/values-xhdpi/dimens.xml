@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //home
+    <dimen name="margin_between_line">10dp</dimen>
+    <dimen name="fotoBayiWidth">300dp</dimen>
+    <dimen name="fotoBayiHeight">200dp</dimen>
+
+    //layout panduan dan tools
+    <dimen name="backGroundSize">125dp</dimen>
+    <dimen name="iconSize">60dp</dimen>
+
+    <dimen name="marginTop">20dp</dimen>
+
+    <dimen name="itemLeftMarginRight">20dp</dimen>
+    <dimen name="itemleftMarginLeft">10dp</dimen>
+
+    <dimen name="itemRightMarginRight">10dp</dimen>
+    <dimen name="itemRightMarginLeft">20dp</dimen>
+
+</resources>

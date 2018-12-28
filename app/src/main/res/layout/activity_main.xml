@@ -6,12 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <FrameLayout
         android:id="@+id/dynamicContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"></FrameLayout>
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/bottom_navigation">
+    </FrameLayout>
 
 
     <android.support.design.widget.BottomNavigationView
