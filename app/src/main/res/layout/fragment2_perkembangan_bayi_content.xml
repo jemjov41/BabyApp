@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/imgBayiSize"
+            android:layout_height="@dimen/imgBayiSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Newborn"
+                android:textStyle="bold"
+                android:textColor="@color/blue_title"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/pekembanganBorn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Newborn"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:textStyle="bold"
+                android:textColor="@color/blue_title"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/pekembanganHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Newborn"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    "
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textStyle="bold"
+                android:textColor="@color/blue_title"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/pekembanganWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Newborn"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pekermbanganDescTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="title"/>
+
+        <TextView
+            android:id="@+id/pekermbanganDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:text="@string/lorem_ipsum"/>
+
+    </LinearLayout>
+
+</LinearLayout>

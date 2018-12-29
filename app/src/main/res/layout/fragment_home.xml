@@ -41,12 +41,15 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/homePerkembanganBayi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_between_line"
-                android:background="@drawable/background_rectangle"
+                android:background="@drawable/background_rectangle_riple"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -65,12 +68,15 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/homeChecklist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_between_line"
-                android:background="@drawable/background_rectangle"
+                android:background="@drawable/background_rectangle_riple"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -89,12 +95,15 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/homeActivities"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_between_line"
-                android:background="@drawable/background_rectangle"
+                android:background="@drawable/background_rectangle_riple"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -113,12 +122,15 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/homePerlengkapanMainan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_between_line"
-                android:background="@drawable/background_rectangle"
+                android:background="@drawable/background_rectangle_riple"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -138,12 +150,15 @@
 
 
             <LinearLayout
+                android:id="@+id/homeResepMpasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_between_line"
-                android:background="@drawable/background_rectangle"
+                android:background="@drawable/background_rectangle_riple"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">BabyApp</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor bibendum magna, a dignissim turpis lacinia non. Mauris sit amet vulputate lacus. Maecenas ac semper neque. Nulla et vehicula ipsum, nec dignissim nibh. Praesent accumsan ipsum id nibh maximus, nec gravida nunc laoreet. Nam pulvinar, quam tincidunt fermentum porta, arcu nisl molestie quam, vel iaculis elit nulla sit amet nibh. Etiam posuere risus non neque consequat laoreet. Mauris vestibulum, risus ut eleifend sodales, justo mauris vestibulum est, ac vulputate nisi ligula nec massa. Ut tincidunt dui enim, in rutrum enim tristique id. Etiam egestas nec est non porta. Nulla lobortis convallis fringilla. Curabitur non vestibulum ligula. Morbi </string>
+
 
     //home page
     <string name="detail_perkembangan_bayi">Detail Perkembangan Bayi Pada Minggu      </string>

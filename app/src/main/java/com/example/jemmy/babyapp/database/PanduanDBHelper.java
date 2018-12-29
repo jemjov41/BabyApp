@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.jemmy.babyapp.entities.PanduanTest;
+import com.example.jemmy.babyapp.entities.Activities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,8 +49,8 @@ public class PanduanDBHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    public List<PanduanTest> getAllNotes() {
-        List<PanduanTest> notes = new ArrayList<>();
+    public List<Activities> getAllNotes() {
+        List<Activities> notes = new ArrayList<>();
 
         // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_NAME ;
@@ -61,7 +61,7 @@ public class PanduanDBHelper extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                PanduanTest note = new PanduanTest();
+                Activities note = new Activities();
                 note.setId(cursor.getInt(cursor.getColumnIndex(COL_1)));
                 note.setText(cursor.getString(cursor.getColumnIndex(COL_2)));
                 note.setDone(cursor.getInt(cursor.getColumnIndex(COL_3))> 0);
@@ -77,7 +77,7 @@ public class PanduanDBHelper extends SQLiteOpenHelper {
         return notes;
     }
 
-    public int updateNote(PanduanTest upPanduan) {
+    public int updateNote(Activities upPanduan) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();

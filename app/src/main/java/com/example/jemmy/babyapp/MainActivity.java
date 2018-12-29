@@ -1,18 +1,20 @@
 package com.example.jemmy.babyapp;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.example.jemmy.babyapp.fragment.ActivitiesFragment;
 import com.example.jemmy.babyapp.fragment.ForumFragment;
 import com.example.jemmy.babyapp.fragment.HomeFragment;
 import com.example.jemmy.babyapp.fragment.PanduanFragment;
+import com.example.jemmy.babyapp.fragment.PerkembanganBayiFragment;
 import com.example.jemmy.babyapp.fragment.SplashFragment;
 import com.example.jemmy.babyapp.fragment.ToolsFragment;
 
@@ -23,6 +25,11 @@ public class MainActivity extends BaseActivity {
     private static final String PANDUAN_CONTENT = "PANDUAN_CONTENT";
     private static final String TOOLS_CONTENT = "TOOLS_CONTENT";
     private static final String FORUM_CONTENT = "FORUM_CONTENT";
+
+    private static final String PERKEMBANGAN_KONTENT= "PERKEMBANGAN_CONTENT";
+    private static final String ACTIVITIES_KONTENT= "ACTIVITIES_KONTENT";
+
+    private FragmentTransaction transaction;
 
     private static boolean initActivity = true;
 
@@ -42,7 +49,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Intent intent;
-                final FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction = getSupportFragmentManager().beginTransaction();
                 switch (menuItem.getItemId()){
                     case R.id.navigation_home:
 //                        intent = new Intent(MainActivity.this, MainActivity.class);
@@ -73,6 +80,20 @@ public class MainActivity extends BaseActivity {
             bottomNavigationView.setSelectedItemId(R.id.navigation_home);
         }
 
+    }
+
+    public void changeToPerkembangan(){
+        transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.dynamicContent, new PerkembanganBayiFragment(), PERKEMBANGAN_KONTENT);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.commit();
+    }
+
+    public void changeToActivities(){
+        transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.dynamicContent, new ActivitiesFragment(), PERKEMBANGAN_KONTENT);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.commit();
     }
 
 

@@ -18,4 +18,7 @@
     <dimen name="itemRightMarginRight">10dp</dimen>
     <dimen name="itemRightMarginLeft">20dp</dimen>
 
+    //perkembangan bayi
+    <dimen name="imgBayiSize">200dp</dimen>
+
 </resources>

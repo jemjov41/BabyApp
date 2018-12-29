@@ -1,24 +1,15 @@
 package com.example.jemmy.babyapp.fragment;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.example.jemmy.babyapp.R;
 import com.example.jemmy.babyapp.database.PanduanDBHelper;
-import com.example.jemmy.babyapp.entities.PanduanTest;
-import com.example.jemmy.babyapp.util.Utils;
-
-import java.util.List;
 
 public class PanduanFragment extends Fragment {
 
@@ -53,8 +44,8 @@ public class PanduanFragment extends Fragment {
 
 //        myDB = new PanduanDBHelper(getActivity());
 //
-//        List<PanduanTest> listPanduan = myDB.getAllNotes();
-//        for(final PanduanTest list : listPanduan) {
+//        List<Activities> listPanduan = myDB.getAllNotes();
+//        for(final Activities list : listPanduan) {
 //            textPanduan.setText(list.getText());
 //            textCheck.setChecked(list.isDone());
 //            Log.d(TAG, String.format("list Panduan %s", list));
