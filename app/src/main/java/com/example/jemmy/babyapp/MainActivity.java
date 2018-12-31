@@ -16,6 +16,9 @@ import com.example.jemmy.babyapp.fragment.HomeFragment;
 import com.example.jemmy.babyapp.fragment.PanduanFragment;
 import com.example.jemmy.babyapp.fragment.PerkembanganBayiFragment;
 import com.example.jemmy.babyapp.fragment.SplashFragment;
+import com.example.jemmy.babyapp.fragment.Tips2Fragment;
+import com.example.jemmy.babyapp.fragment.Tips3Fragment;
+import com.example.jemmy.babyapp.fragment.TipsFragment;
 import com.example.jemmy.babyapp.fragment.ToolsFragment;
 
 public class MainActivity extends BaseActivity {
@@ -93,6 +96,33 @@ public class MainActivity extends BaseActivity {
         transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.dynamicContent, new ActivitiesFragment(), PERKEMBANGAN_KONTENT);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.commit();
+    }
+
+    public void changeToTips(){
+        transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.dynamicContent, new TipsFragment(), PERKEMBANGAN_KONTENT);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.commit();
+    }
+
+    public void changeToTips2(Bundle arguments){
+        transaction = getSupportFragmentManager().beginTransaction();
+        Tips2Fragment fragment = new Tips2Fragment();
+        fragment.setArguments(arguments);
+        transaction.replace(R.id.dynamicContent, fragment, PERKEMBANGAN_KONTENT);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    public void changeToTips3(Bundle arguments){
+        transaction = getSupportFragmentManager().beginTransaction();
+        Tips3Fragment fragment = new Tips3Fragment();
+        fragment.setArguments(arguments);
+        transaction.replace(R.id.dynamicContent, fragment, PERKEMBANGAN_KONTENT);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 

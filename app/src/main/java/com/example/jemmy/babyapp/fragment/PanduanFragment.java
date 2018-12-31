@@ -7,7 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
+import com.example.jemmy.babyapp.MainActivity;
 import com.example.jemmy.babyapp.R;
 import com.example.jemmy.babyapp.database.PanduanDBHelper;
 
@@ -20,6 +22,8 @@ public class PanduanFragment extends Fragment {
 //    private TextView textPanduan;
 //    private CheckBox textCheck;
     private int displayWidth;
+
+    private LinearLayout tipsLayout;
 
     @Nullable
     @Override
@@ -35,12 +39,22 @@ public class PanduanFragment extends Fragment {
 //
 //        displayWidth = Utils.getDisplayWidth(getActivity());
 //        int widthBackground = displayWidth/2
+
+        tipsLayout = view.findViewById(R.id.panduanLayoutTips);
         return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        tipsLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.changeToTips();
+            }
+        });
 
 //        myDB = new PanduanDBHelper(getActivity());
 //

@@ -13,12 +13,12 @@ import com.example.jemmy.babyapp.database.PanduanDBHelper;
 
 public class ForumFragment extends Fragment {
 
-    PanduanDBHelper myDB;
+//    PanduanDBHelper myDB;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_forum, container, false);
+        final View view = inflater.inflate(R.layout.fragment2_checklist_content, container, false);
 
         return view;
     }
@@ -26,9 +26,9 @@ public class ForumFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        myDB = new PanduanDBHelper(getActivity());
-
-        myDB.save_panduan("test save");
+//        myDB = new PanduanDBHelper(getActivity());
+//
+//        myDB.save_panduan("test save");
     }
 
 }

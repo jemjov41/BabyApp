@@ -21,4 +21,11 @@
     //perkembangan bayi
     <dimen name="imgBayiSize">200dp</dimen>
 
+    //tips
+    <dimen name="imgTipsList2W">70dp</dimen>
+    <dimen name="imgTipsList2H">50dp</dimen>
+
+    //resep
+    <dimen name="imgresepW">70dp</dimen>
+    <dimen name="imgResepH">50dp</dimen>
 </resources>

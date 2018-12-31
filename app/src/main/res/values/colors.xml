@@ -10,4 +10,5 @@
     <color name="ligh_grey">#efefef</color>
     <color name="clicked_effect">#a02ea2</color>
     <color name="blue_title">#529dff</color>
+    <color name="tips_list">#ece4dc</color>
 </resources>

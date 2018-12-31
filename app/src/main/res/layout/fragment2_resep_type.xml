@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/all_resep_wrap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="All"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="8dp"/>
+
+            <ImageView
+                android:id="@+id/selectedSignAllResep"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                app:srcCompat="@drawable/ic_line_divider_bar"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bookmark_resep_wrap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Bookmark"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="8dp"/>
+
+            <ImageView
+                android:id="@+id/selectedSignBookmark"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                app:srcCompat="@drawable/ic_line_divider_bar"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

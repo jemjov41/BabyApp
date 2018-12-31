@@ -34,7 +34,7 @@
         android:gravity="center">
 
         <LinearLayout
-            android:id="@+id/layoutPerkembangan"
+            android:id="@+id/panduanLayoutPerkembangan"
             android:layout_width="@dimen/backGroundSize"
             android:layout_height="@dimen/backGroundSize"
             android:layout_marginEnd="@dimen/itemLeftMarginRight"
@@ -61,7 +61,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layoutChecklist"
+            android:id="@+id/panduanLayoutChecklist"
             android:layout_width="@dimen/backGroundSize"
             android:layout_height="@dimen/backGroundSize"
             android:background="@drawable/background_rectangle_riple"
@@ -95,7 +95,7 @@
         android:gravity="center">
 
         <LinearLayout
-            android:id="@+id/layoutActivities"
+            android:id="@+id/panduanLayoutActivities"
             android:layout_width="@dimen/backGroundSize"
             android:layout_height="@dimen/backGroundSize"
             android:layout_marginEnd="@dimen/itemLeftMarginRight"
@@ -122,7 +122,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layoutPerlengkapan"
+            android:id="@+id/panduanLayoutPerlengkapan"
             android:layout_width="@dimen/backGroundSize"
             android:layout_height="@dimen/backGroundSize"
             android:background="@drawable/background_rectangle_riple"
@@ -156,7 +156,7 @@
         android:gravity="center">
 
         <LinearLayout
-            android:id="@+id/layoutResep"
+            android:id="@+id/panduanLayoutResep"
             android:layout_width="@dimen/backGroundSize"
             android:layout_height="@dimen/backGroundSize"
             android:layout_marginEnd="@dimen/itemLeftMarginRight"
@@ -183,7 +183,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layoutTips"
+            android:id="@+id/panduanLayoutTips"
             android:layout_width="@dimen/backGroundSize"
             android:layout_height="@dimen/backGroundSize"
             android:background="@drawable/background_rectangle_riple"
