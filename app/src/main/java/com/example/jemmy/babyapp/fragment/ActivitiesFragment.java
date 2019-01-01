@@ -28,6 +28,7 @@ public class ActivitiesFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment2_activities, container, false);
 
         viewPager = view.findViewById(R.id.contentActivities);
+
         ArrayList<Activities> listPerkembanganBayis = new ArrayList<>();
         Activities perkembanganBayi = new Activities();
         perkembanganBayi.setText("HELLO");
@@ -50,6 +51,7 @@ public class ActivitiesFragment extends Fragment {
         Activities perkembanganBayi6 = new Activities();
         perkembanganBayi6.setText("HELLO WORLD .....!!!!");
         listPerkembanganBayis.add(perkembanganBayi6);
+
         viewPager.setAdapter(new ActivitiesAdapter(getActivity().getSupportFragmentManager(),getActivity(), listPerkembanganBayis));
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tablayoutActivities);
         tabLayout.setupWithViewPager(viewPager);

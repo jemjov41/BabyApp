@@ -11,10 +11,12 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.example.jemmy.babyapp.fragment.ActivitiesFragment;
+import com.example.jemmy.babyapp.fragment.ChecklistFragment;
 import com.example.jemmy.babyapp.fragment.ForumFragment;
 import com.example.jemmy.babyapp.fragment.HomeFragment;
 import com.example.jemmy.babyapp.fragment.PanduanFragment;
 import com.example.jemmy.babyapp.fragment.PerkembanganBayiFragment;
+import com.example.jemmy.babyapp.fragment.ResepMakananFragment;
 import com.example.jemmy.babyapp.fragment.SplashFragment;
 import com.example.jemmy.babyapp.fragment.Tips2Fragment;
 import com.example.jemmy.babyapp.fragment.Tips3Fragment;
@@ -31,6 +33,12 @@ public class MainActivity extends BaseActivity {
 
     private static final String PERKEMBANGAN_KONTENT= "PERKEMBANGAN_CONTENT";
     private static final String ACTIVITIES_KONTENT= "ACTIVITIES_KONTENT";
+    private static final String RESEP_KONTENT= "RESEP_KONTENT";
+    private static final String CHECKLIST_KONTENT= "CHECKLIST_KONTENT";
+
+    private static final String TIPS_KONTENT= "TIPS_KONTENT";
+    private static final String TIPS2_KONTENT= "TIPS2_KONTENT";
+    private static final String TIPS3_KONTENT= "TIPS3_KONTENT";
 
     private FragmentTransaction transaction;
 
@@ -89,20 +97,39 @@ public class MainActivity extends BaseActivity {
         transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.dynamicContent, new PerkembanganBayiFragment(), PERKEMBANGAN_KONTENT);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    public void changeToChecklist(){
+        transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.dynamicContent, new ChecklistFragment(), CHECKLIST_KONTENT);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 
     public void changeToActivities(){
         transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.dynamicContent, new ActivitiesFragment(), PERKEMBANGAN_KONTENT);
+        transaction.replace(R.id.dynamicContent, new ActivitiesFragment(), ACTIVITIES_KONTENT);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    public void changeToResepMakanan(){
+        transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.dynamicContent, new ResepMakananFragment(), RESEP_KONTENT);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 
     public void changeToTips(){
         transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.dynamicContent, new TipsFragment(), PERKEMBANGAN_KONTENT);
+        transaction.replace(R.id.dynamicContent, new TipsFragment(), TIPS_KONTENT);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 
@@ -110,7 +137,7 @@ public class MainActivity extends BaseActivity {
         transaction = getSupportFragmentManager().beginTransaction();
         Tips2Fragment fragment = new Tips2Fragment();
         fragment.setArguments(arguments);
-        transaction.replace(R.id.dynamicContent, fragment, PERKEMBANGAN_KONTENT);
+        transaction.replace(R.id.dynamicContent, fragment, TIPS2_KONTENT);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.addToBackStack(null);
         transaction.commit();
@@ -120,7 +147,7 @@ public class MainActivity extends BaseActivity {
         transaction = getSupportFragmentManager().beginTransaction();
         Tips3Fragment fragment = new Tips3Fragment();
         fragment.setArguments(arguments);
-        transaction.replace(R.id.dynamicContent, fragment, PERKEMBANGAN_KONTENT);
+        transaction.replace(R.id.dynamicContent, fragment, TIPS3_KONTENT);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.addToBackStack(null);
         transaction.commit();

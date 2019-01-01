@@ -16,7 +16,9 @@ import com.example.jemmy.babyapp.R;
 public class HomeFragment extends Fragment {
 
     private LinearLayout perkembanganBayi;
+    private LinearLayout checklist;
     private LinearLayout activities;
+    private LinearLayout resepMakanan;
 
     @Nullable
     @Override
@@ -24,7 +26,9 @@ public class HomeFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         perkembanganBayi = view.findViewById(R.id.homePerkembanganBayi);
+        checklist = view.findViewById(R.id.homeChecklist);
         activities = view.findViewById(R.id.homeActivities);
+        resepMakanan = view.findViewById(R.id.homeResepMpasi);
 
         return view;
     }
@@ -46,6 +50,22 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
                 mainActivity.changeToActivities();
+            }
+        });
+
+        checklist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.changeToChecklist();
+            }
+        });
+
+        resepMakanan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.changeToResepMakanan();
             }
         });
     }
