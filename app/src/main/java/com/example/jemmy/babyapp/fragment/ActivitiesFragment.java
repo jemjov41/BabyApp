@@ -12,9 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.jemmy.babyapp.R;
 import com.example.jemmy.babyapp.adapter.ActivitiesAdapter;
-import com.example.jemmy.babyapp.adapter.PagerPerkembanganBayiAdapter;
 import com.example.jemmy.babyapp.entities.Activities;
-import com.example.jemmy.babyapp.entities.PerkembanganBayi;
 
 import java.util.ArrayList;
 

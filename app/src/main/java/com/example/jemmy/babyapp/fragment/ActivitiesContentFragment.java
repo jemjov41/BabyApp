@@ -12,7 +12,6 @@ import android.widget.ListView;
 import com.example.jemmy.babyapp.R;
 import com.example.jemmy.babyapp.adapter.ActivitiesListAdapter;
 import com.example.jemmy.babyapp.entities.Activities;
-import com.example.jemmy.babyapp.entities.PerkembanganBayi;
 
 import java.util.ArrayList;
 

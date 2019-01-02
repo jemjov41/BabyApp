@@ -9,13 +9,11 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import com.example.jemmy.babyapp.R;
 import com.example.jemmy.babyapp.adapter.PagerPerkembanganBayiAdapter;
 import com.example.jemmy.babyapp.entities.PerkembanganBayi;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class PerkembanganBayiFragment extends Fragment {
@@ -38,7 +36,7 @@ public class PerkembanganBayiFragment extends Fragment {
         PerkembanganBayi perkembanganBayi2 = new PerkembanganBayi();
         perkembanganBayi2.setText("HELLO WORLD !!!!");
         listPerkembanganBayis.add(perkembanganBayi2);
-        viewPager.setAdapter(new PagerPerkembanganBayiAdapter(getActivity().getSupportFragmentManager(),getActivity(), listPerkembanganBayis));
+        viewPager.setAdapter(new PagerPerkembanganBayiAdapter(getChildFragmentManager(),getActivity(), listPerkembanganBayis));
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tablayoutPerkembangan);
         tabLayout.setupWithViewPager(viewPager);
 

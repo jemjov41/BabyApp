@@ -3,10 +3,10 @@ package com.example.jemmy.babyapp.fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +15,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.jemmy.babyapp.R;
-import com.example.jemmy.babyapp.adapter.ResepMakananAdapter;
 
 import java.io.Serializable;
 
 public class ResepMakananTypeFragment extends Fragment {
 
+    private String TAG = "ResepMakananTypeFrag";
+
     private static FrameLayout typeSelected;
+    public static final String PARAM_KIND = "kind";
 
     private LinearLayout resepAll;
     private LinearLayout resepBookmark;
@@ -48,60 +50,93 @@ public class ResepMakananTypeFragment extends Fragment {
         resepAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                resepAllShow(getFragmentManager());
+                selectSign();
+                enableAndDisableClick();
             }
         });
 
         resepBookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                resepBookmarkShow(getFragmentManager());
+                selectSign();
+                enableAndDisableClick();
             }
         });
+
+        final Bundle b = getArguments();
+        final Kind kind = (Kind) b.getSerializable(PARAM_KIND);
+        switch (kind) {
+            case ALL:
+                resepAllShow(getFragmentManager());
+                selectSign();
+                enableAndDisableClick();
+                break;
+            case BOOKMARK:
+                resepBookmarkShow(getFragmentManager());
+                selectSign();
+                enableAndDisableClick();
+                break;
+        }
+
         return view;
     }
 
-    public static ResepMakananTypeFragment newInstance(FrameLayout resepContent) {
+    public static ResepMakananTypeFragment newInstance(Kind kind, FrameLayout resepContent) {
         final ResepMakananTypeFragment f = new ResepMakananTypeFragment();
+
+        Bundle b = new Bundle();
+        b.putSerializable(PARAM_KIND, kind);
+        f.setArguments(b);
 
         typeSelected = resepContent;
         return f;
     }
 
-    public static void resepAllShow(FragmentActivity activity) {
-        final FragmentTransaction ft = activity.getSupportFragmentManager().beginTransaction();
+    public static void resepAllShow(FragmentManager fm) {
+        final FragmentTransaction ft = fm.beginTransaction();
         ft.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
-        ft.replace(typeSelected.getId(), new ResepMakananContentFragment());
+
+        ResepMakananContentFragment resepContent = ResepMakananContentFragment.newInstance(Kind.ALL);
+        ft.replace(typeSelected.getId(), resepContent);
         ft.commit();
         flag = Kind.ALL;
     }
 
-    public static void resepBookmarkShow(FragmentActivity activity) {
-        final FragmentTransaction ft = activity.getSupportFragmentManager().beginTransaction();
-        ft.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
-        ft.replace(typeSelected.getId(), new ResepMakananContentFragment());
+    public static void resepBookmarkShow(FragmentManager fm) {
+        Log.d("asd", String.format("frame content resep id %s", typeSelected.getId()));
+        final FragmentTransaction ft = fm.beginTransaction();
+        ft.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
+
+        ResepMakananContentFragment resepContent = ResepMakananContentFragment.newInstance(Kind.BOOKMARK);
+        ft.replace(typeSelected.getId(), resepContent);
         ft.commit();
         flag = Kind.BOOKMARK;
     }
 
-    private void selectSign(){
-        switch (flag){
+    private void selectSign() {
+        switch (flag) {
             case ALL:
-
+                signAll.setVisibility(View.VISIBLE);
+                signBookmark.setVisibility(View.INVISIBLE);
                 break;
             case BOOKMARK:
-
+                signAll.setVisibility(View.INVISIBLE);
+                signBookmark.setVisibility(View.VISIBLE);
                 break;
         }
     }
 
-    private void enableAndDisableClick(){
-        switch (flag){
+    private void enableAndDisableClick() {
+        switch (flag) {
             case ALL:
-
+                resepAll.setEnabled(false);
+                resepBookmark.setEnabled(true);
                 break;
             case BOOKMARK:
-
+                resepAll.setEnabled(true);
+                resepBookmark.setEnabled(false);
                 break;
         }
     }

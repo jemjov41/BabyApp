@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.jemmy.babyapp.R;
-import com.example.jemmy.babyapp.adapter.ActivitiesAdapter;
 import com.example.jemmy.babyapp.adapter.ResepMakananAdapter;
 import com.example.jemmy.babyapp.entities.ResepMakanan;
 import com.example.jemmy.babyapp.entities.ResepMakananList;
@@ -39,8 +38,14 @@ public class ResepMakananFragment extends Fragment {
         resepMakanan.setKisaranUsia("6 - 8 bulan");
         resepMakanan.setNamaResep("bubur");
 
+        ResepMakanan resepMakanan2 = new ResepMakanan();
+        resepMakanan2.setBookmark(true);
+        resepMakanan2.setImageUrl("image url");
+        resepMakanan2.setKisaranUsia("5 - 8 bulan");
+        resepMakanan2.setNamaResep("bubur bayi");
+
         resepMakanans.add(resepMakanan);
-        resepMakanans.add(resepMakanan);
+        resepMakanans.add(resepMakanan2);
         resepMakanans.add(resepMakanan);
 
         resepList.setResepMakanans(resepMakanans);

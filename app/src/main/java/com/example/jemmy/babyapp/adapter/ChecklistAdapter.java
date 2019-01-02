@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.jemmy.babyapp.entities.Checklist;
-import com.example.jemmy.babyapp.entities.ChecklistParentContent;
 import com.example.jemmy.babyapp.fragment.ChecklistListFragment;
 
 import java.util.ArrayList;

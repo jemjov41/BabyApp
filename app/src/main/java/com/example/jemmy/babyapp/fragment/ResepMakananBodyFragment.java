@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.example.jemmy.babyapp.R;
-import com.example.jemmy.babyapp.entities.Activities;
 import com.example.jemmy.babyapp.entities.ResepMakananList;
 
 public class ResepMakananBodyFragment extends Fragment {
@@ -22,6 +21,8 @@ public class ResepMakananBodyFragment extends Fragment {
 
     private static final String RESEP_TYPE_KONTENT = "RESEP_TYPE_KONTENT";
 
+    private static ResepMakananList resepList;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,11 +30,15 @@ public class ResepMakananBodyFragment extends Fragment {
 
         Log.d(TAG, String.format("resep makanan %s", getArguments().getParcelable("text")));
 
+        resepList = getArguments().getParcelable("text");
+
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         FrameLayout resepContent = view.findViewById(R.id.flResepMakananContent);
-        final ResepMakananTypeFragment bottomNavigationFragment =
-                ResepMakananTypeFragment.newInstance(resepContent);
-        transaction.replace(R.id.flResepMakananType, bottomNavigationFragment, RESEP_TYPE_KONTENT);
+
+        final ResepMakananTypeFragment resepTypeFragment =
+                ResepMakananTypeFragment.newInstance(ResepMakananTypeFragment.Kind.ALL,resepContent);
+
+        transaction.replace(R.id.flResepMakananType, resepTypeFragment, RESEP_TYPE_KONTENT);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.commit();
 
@@ -49,5 +54,9 @@ public class ResepMakananBodyFragment extends Fragment {
         f.setArguments(b);
 
         return f;
+    }
+
+    public static ResepMakananList getResepList(){
+        return resepList;
     }
 }

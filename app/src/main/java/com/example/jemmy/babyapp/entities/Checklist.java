@@ -7,7 +7,6 @@ import java.util.ArrayList;
 
 public class Checklist implements Parcelable {
 
-    private int id;
     private ArrayList<ChecklistParentContent> checklistParentContents;
 
     public Checklist() {
@@ -15,7 +14,6 @@ public class Checklist implements Parcelable {
     }
 
     protected Checklist(Parcel in) {
-        id = in.readInt();
         checklistParentContents = in.createTypedArrayList(ChecklistParentContent.CREATOR);
     }
 
@@ -31,14 +29,6 @@ public class Checklist implements Parcelable {
         }
     };
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public ArrayList<ChecklistParentContent> getChecklistParentContents() {
         return checklistParentContents;
     }
@@ -48,21 +38,19 @@ public class Checklist implements Parcelable {
     }
 
     @Override
+    public String toString() {
+        return "Checklist{" +
+                "checklistParentContents=" + checklistParentContents +
+                '}';
+    }
+
+    @Override
     public int describeContents() {
         return 0;
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(id);
         dest.writeTypedList(checklistParentContents);
-    }
-
-    @Override
-    public String toString() {
-        return "Checklist{" +
-                "id=" + id +
-                ", checklistParentContents=" + checklistParentContents +
-                '}';
     }
 }

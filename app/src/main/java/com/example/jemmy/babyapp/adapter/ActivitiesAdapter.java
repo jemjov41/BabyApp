@@ -7,9 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.jemmy.babyapp.entities.Activities;
-import com.example.jemmy.babyapp.entities.PerkembanganBayi;
 import com.example.jemmy.babyapp.fragment.ActivitiesContentFragment;
-import com.example.jemmy.babyapp.fragment.PerkembanganBayiContentFragment;
 
 import java.util.ArrayList;
 

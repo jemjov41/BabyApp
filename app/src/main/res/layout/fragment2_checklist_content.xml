@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
     <LinearLayout
         android:id="@+id/checklishExpandMenu"
         android:layout_width="match_parent"
@@ -14,7 +18,8 @@
         <ListView
             android:id="@+id/listChecklistChild"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:visibility="gone">
 
         </ListView>
     </LinearLayout>
@@ -23,6 +28,7 @@
         android:id="@+id/checklishTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:weightSum="10"
         android:background="@drawable/background_rectangle_rounded_grey"
         android:clickable="true"
         android:focusable="true">
@@ -31,7 +37,16 @@
             android:id="@+id/titleChecklist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="9"
             android:text="title"
             android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/arrowExpandIndicator"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_down_arrow"/>
     </LinearLayout>
 </RelativeLayout>

@@ -12,9 +12,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.example.jemmy.babyapp.R;
-import com.example.jemmy.babyapp.entities.Checklist;
 import com.example.jemmy.babyapp.entities.ChecklistChild;
-import com.example.jemmy.babyapp.entities.ChecklistParentContent;
 
 import java.util.ArrayList;
 
